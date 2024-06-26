@@ -18,7 +18,7 @@ const Project = () => {
               <span className="text-zinc-500">share</span>
             </h6>
           </div>
-          <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2 tracking-widest text-justify">
+          <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2 tracking-wide text-justify">
             <ProMainCard
               titlePro={"Personal Portfolio"}
               imgSrc={project1}
