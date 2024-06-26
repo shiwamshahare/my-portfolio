@@ -5,8 +5,8 @@ const Contact = () => {
   return (
     <main>
       <section className="justify-center flex md:flex-row flex-col align-center px-6 sm:px-14 md:px-20">
-        <div className="h-auto w-full max-w-7xl  pd-12 select-none">
-          <h1 className="text-accent1 dark:text-white text-black text-4xl mt-5 text-center  transition-all ease-in-out duration-300 hover:tracking-wide">
+        <div className="h-auto w-full max-w-7xl pd-12 select-none">
+          <h1 className="text-accent1  text-4xl mt-5 text-center transition-all ease-in-out duration-300 hover:tracking-wide">
             Contact <span className="text-blue-500 text-accent1 ">Me!</span>
           </h1>
           <div className="mt-8 text-xl text-center pointer-events-none tracking-widest">
