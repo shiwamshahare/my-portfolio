@@ -1,5 +1,5 @@
 import React from "react";
-//import Resume from "../../assets/Shiwam_Shahare_resume.pdf";
+import Resume from "../../assets/Resume_web.pdf";
 import { Link } from "react-router-dom";
 import DownloadBtnSvg from "../Svg/HomeSvg/DownloadBtnSvg";
 
@@ -11,7 +11,7 @@ const BtnResume = () => {
     >
       <Link
         target="_parent"
-        //to={Resume}
+        to={Resume}
         download="Web_Resume"
         className="flex flex-row gap-3"
       >
