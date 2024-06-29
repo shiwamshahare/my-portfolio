@@ -6,7 +6,7 @@ const Form = () => {
     personName: "",
     mobileNum: "",
     email: "",
-    feedback: "",
+    feedBack: "",
   });
 
   const formSend = useRef();
@@ -99,17 +99,17 @@ const Form = () => {
         <br />
         <br />
 
-        <label htmlFor="feedback" className="sm:ml-10 font-bold">
+        <label htmlFor="feedBack" className="sm:ml-10 font-bold">
           A Few Words <sup className="text-red-600 font-bold">*</sup>
           &ensp;:
         </label>
         <br />
         <textarea
           type="text"
-          id="feedback"
-          name="feedback"
+          id="feedBack"
+          name="feedBack"
           placeholder="..."
-          value={formData.feedback}
+          value={formData.feedBack}
           onChange={handleInputData}
           minLength={4}
           className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none valid:border-green-500 focus:invalid:border-red-500"
