@@ -3,11 +3,13 @@ import emailjs from "@emailjs/browser";
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
+    personName: "",
     mobileNum: "",
     email: "",
     feedback: "",
   });
+
+  const formSend = useRef();
 
   const handleInputData = (e) => {
     setFormData((currentData) => {
@@ -17,28 +19,42 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    emailjs
+      .sendForm("service_bafl5k9", "template_m2fr3vs", formSend.current, {
+        publicKey: "ow4l8spoD2K5FYtzc",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+
     console.log(formData);
+
     setFormData({
-      fullName: "",
+      personName: "",
       mobileNum: "",
       email: "",
-      feedback: "",
+      feedBack: "",
     });
   };
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="fullName" className="font-bold sm:ml-10">
+        <label htmlFor="personName" className="font-bold sm:ml-10">
           Name
           <sup className="text-red-600 font-bold">* </sup>&ensp;:
         </label>
         <br />
         <input
           type="text"
-          id="fullName"
-          name="fullName"
+          id="personName"
+          name="personName"
           placeholder="Tony Stark"
-          value={formData.fullName}
+          value={formData.personName}
           onChange={handleInputData}
           pattern="^[A-Za-z\s]*[A-Za-z]{3,}$"
           className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none  valid:border-green-500 focus:invalid:border-red-500"
