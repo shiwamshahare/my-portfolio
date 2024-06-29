@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -40,7 +41,7 @@ const Form = () => {
           value={formData.fullName}
           onChange={handleInputData}
           pattern="^[A-Za-z\s]*[A-Za-z]{3,}$"
-          className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none"
+          className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none  valid:border-green-500 focus:invalid:border-red-500"
           required
         ></input>
         <br />
@@ -58,7 +59,7 @@ const Form = () => {
           value={formData.mobileNum}
           onChange={handleInputData}
           pattern="^\d{10}$"
-          className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none"
+          className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none valid:border-green-500 focus:invalid:border-red-500"
           required
         ></input>
         <br />
@@ -75,8 +76,8 @@ const Form = () => {
           placeholder="xyz@domain.com"
           value={formData.email}
           onChange={handleInputData}
-          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-          className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none"
+          pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
+          className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none valid:border-green-500 focus:invalid:border-red-500"
           required
         ></input>
         <br />
@@ -94,7 +95,8 @@ const Form = () => {
           placeholder="..."
           value={formData.feedback}
           onChange={handleInputData}
-          className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none "
+          minLength={4}
+          className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none valid:border-green-500 focus:invalid:border-red-500"
           required
         ></textarea>
         <br />
