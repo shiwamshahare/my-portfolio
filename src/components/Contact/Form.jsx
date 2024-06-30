@@ -1,7 +1,10 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { Modal } from "flowbite-react";
+import ThankYouSvg from "../Svg/Contact/ThankYouSvg";
 
 const Form = () => {
+  const [openModal, setOpenModal] = useState(false);
   const [formData, setFormData] = useState({
     personName: "",
     mobileNum: "",
@@ -17,29 +20,61 @@ const Form = () => {
     });
   };
 
+  const handleModal = () => {
+    setOpenModal(!openModal);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // emailjs.init("ow4l8spoD2K5FYtzc");
+    // emailjs
+    //   .sendForm(
+    //     "service_bafl5k9",
+    //     "template_m2fr3vs",
+    //     formSend.current
+    //     //   {
+    //     //     publicKey: "ow4l8spoD2K5FYtzc",
+    //     //   }
+    //   )
+    //   .then(
+    //     () => {
+    //       console.log("SUCCESS!");
+    //     },
+    //     (error) => {
+    //       console.log("FAILED...", error);
+    //     }
+    //   );
+
+    // console.log(formData);
+
+    // setFormData({
+    //   personName: "",
+    //   mobileNum: "",
+    //   email: "",
+    //   feedBack: "",
+    // });
+
+    // handleModal();
+
+    emailjs.init("ow4l8spoD2K5FYtzc"); // Initialize EmailJS with the public key
     emailjs
-      .sendForm("service_bafl5k9", "template_m2fr3vs", formSend.current, {
-        publicKey: "ow4l8spoD2K5FYtzc",
-      })
+      .sendForm("service_bafl5k9", "template_m2fr3vs", formSend.current)
       .then(
-        () => {
-          console.log("SUCCESS!");
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          handleModal(); // Show the modal on success
+          setFormData({
+            personName: "",
+            mobileNum: "",
+            email: "",
+            feedBack: "",
+          });
         },
         (error) => {
           console.log("FAILED...", error.text);
         }
       );
-
-    console.log(formData);
-
-    setFormData({
-      personName: "",
-      mobileNum: "",
-      email: "",
-      feedBack: "",
-    });
   };
   return (
     <>
@@ -123,6 +158,33 @@ const Form = () => {
         >
           Submit
         </button>
+        <div>
+          <Modal
+            show={openModal}
+            size="md"
+            onClose={handleModal}
+            popup
+            className="backdrop-blur-xl flex justify-center items-center"
+          >
+            <Modal.Body>
+              <div className="shadow-2xl backdrop-blur-3xl shadow-slate-700 pb-8 text-center rounded-2xl items-center justify-center flex flex-col lg:mx-96">
+                <ThankYouSvg />
+                <h3 className="mb-5 text-lg">
+                  The form has been submitted successfully. <br />
+                  We will reply to you soon!
+                </h3>
+                <div className="flex justify-center gap-4">
+                  <button
+                    className="rounded-2xl rounded-tr-none ring-2 px-4 py-2 text-accent1 text-zinc-600 shadow-zinc-400 bg-blue-100 transition-all ease-in-out duration-300 hover:tracking-widest"
+                    onClick={handleModal}
+                  >
+                    Go Back
+                  </button>
+                </div>
+              </div>
+            </Modal.Body>
+          </Modal>
+        </div>
       </form>
     </>
   );
