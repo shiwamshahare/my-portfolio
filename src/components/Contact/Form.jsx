@@ -27,54 +27,28 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // emailjs.init("ow4l8spoD2K5FYtzc");
-    // emailjs
-    //   .sendForm(
-    //     "service_bafl5k9",
-    //     "template_m2fr3vs",
-    //     formSend.current
-    //     //   {
-    //     //     publicKey: "ow4l8spoD2K5FYtzc",
-    //     //   }
-    //   )
-    //   .then(
-    //     () => {
-    //       console.log("SUCCESS!");
-    //     },
-    //     (error) => {
-    //       console.log("FAILED...", error);
-    //     }
-    //   );
-
-    // console.log(formData);
-
-    // setFormData({
-    //   personName: "",
-    //   mobileNum: "",
-    //   email: "",
-    //   feedBack: "",
-    // });
-
-    // handleModal();
-
-    emailjs.init("ow4l8spoD2K5FYtzc"); // Initialize EmailJS with the public key
     emailjs
-      .sendForm("service_bafl5k9", "template_m2fr3vs", formSend.current)
-      .then(
-        (result) => {
-          console.log("SUCCESS!", result.text);
-          handleModal(); // Show the modal on success
-          setFormData({
-            personName: "",
-            mobileNum: "",
-            email: "",
-            feedBack: "",
-          });
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+      .sendForm("service_bafl5k9", "template_m2fr3vs", formSend.current, {
+        publicKey: "ow4l8spoD2K5FYtzc",
+      })
+      .then(() => {
+        console.log("SUCCESS!");
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+      });
+
+    console.log(formData);
+
+    setFormData({
+      personName: "",
+      mobileNum: "",
+      email: "",
+      feedBack: "",
+    });
+    setTimeout(() => {
+      handleModal();
+    }, 5000);
   };
   return (
     <>
@@ -127,7 +101,7 @@ const Form = () => {
           placeholder="xyz@domain.com"
           value={formData.email}
           onChange={handleInputData}
-          pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
           className="pd-12 border-b-2 w-4/5 sm:ml-10 focus:outline-none valid:border-green-500 focus:invalid:border-red-500"
           required
         ></input>
