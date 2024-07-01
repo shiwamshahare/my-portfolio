@@ -149,7 +149,7 @@ const Form = () => {
                 </h3>
                 <div className="flex justify-center gap-4">
                   <button
-                    className="rounded-2xl rounded-tr-none ring-2 px-4 py-2 text-accent1 text-zinc-600 shadow-zinc-400 bg-blue-100 transition-all ease-in-out duration-300 hover:tracking-widest"
+                    className="rounded-2xl rounded-tr-none ring-2 px-4 py-2 text-accent1 text-zinc-600 shadow-zinc-400  bg-blue-100 transition-all ease-in-out duration-300 hover:tracking-widest"
                     onClick={handleModal}
                   >
                     Go Back
