@@ -31,28 +31,28 @@ const Form = () => {
       .sendForm("service_bafl5k9", "template_m2fr3vs", formSend.current, {
         publicKey: "ow4l8spoD2K5FYtzc",
       })
-      .then(() => {
-        console.log("SUCCESS!");
-      })
-      .catch((error) => {
-        console.log("FAILED...", error);
-      });
-
-    console.log(formData);
-
-    setFormData({
-      personName: "",
-      mobileNum: "",
-      email: "",
-      feedBack: "",
-    });
-    setTimeout(() => {
-      handleModal();
-    }, 5000);
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          console.log(formData);
+          setTimeout(() => {
+            handleModal();
+          }, 100);
+          setFormData({
+            personName: "",
+            mobileNum: "",
+            email: "",
+            feedBack: "",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form ref={formSend} onSubmit={handleSubmit}>
         <label htmlFor="personName" className="font-bold sm:ml-10">
           Name
           <sup className="text-red-600 font-bold">* </sup>&ensp;:
