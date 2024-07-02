@@ -22,6 +22,7 @@ const Navbar = () => {
         className={`${
           isOpened ? " " : "hidden"
         } text-center items-center gap-2 rounded-lg flex-col md:flex-row md:rounded-full px-2 md:py-2 py-48 shadow-2xl ring-1 backdrop-blur-md md:h-auto h-dvh justify-center grid md:flex`}
+        onClick={toggleMenubtn}
       >
         <Navbar_list before_span={"h"} after_span={"me"} to={""} />
         <Navbar_list before_span={"ab"} after_span={"ut"} to={"/about"} />
