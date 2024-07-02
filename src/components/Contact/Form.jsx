@@ -52,7 +52,7 @@ const Form = () => {
   };
   return (
     <>
-      <form ref={formSend} onSubmit={handleSubmit}>
+      <form ref={formSend} onSubmit={handleSubmit} netlify>
         <label htmlFor="personName" className="font-bold sm:ml-10">
           Name
           <sup className="text-red-600 font-bold">* </sup>&ensp;:
