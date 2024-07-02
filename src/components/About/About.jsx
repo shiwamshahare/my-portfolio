@@ -1,8 +1,8 @@
 import React from "react";
 import FlagSvg from "../Svg/About/FlagSvg";
-import NewAboutSvg from "../Svg/About/NewAboutSvg";
 import { Link } from "react-router-dom";
 import TiltSvg from "../Svg/TiltSvg";
+import AboutSectionSvg from "../Svg/About/AboutSectionSvg";
 
 const About = () => {
   return (
@@ -11,7 +11,7 @@ const About = () => {
         className="flex justify-space-between align-center pb-32"
         id="about"
       >
-        <div className="mx-auto mt-0 flex max-w-7xl flex-col items-center gap-48 px-6 pt-2  text-center sm:px-8 md:mt-16 lg:mt-0 lg:flex-row lg:text-left tracking-widest">
+        <div className="mx-auto mt-0 flex max-w-7xl flex-col items-center gap-32 px-6 pt-2  text-center sm:px-8 md:mt-16 lg:mt-0 lg:flex-row lg:text-left tracking-widest">
           <div className="w-full overflow-hidden drop-shadow-2xl sm:w-1/2 lg:inline-block ">
             <div
               style={{ transform: "none" }}
@@ -20,7 +20,7 @@ const About = () => {
               <TiltSvg
                 style={{ opacity: 1 }}
                 className="flex justify-center align-center ease-in-out duration-75"
-                SvgContet={<NewAboutSvg />}
+                SvgContet={<AboutSectionSvg />}
               />
             </div>
           </div>
@@ -31,7 +31,7 @@ const About = () => {
               </h1>
             </div>
             <div style={{ opacity: 1, transform: "none" }}>
-              <p className="mt-8  font-medium sm:text-lg md:text-lg pointer-events-none">
+              <p className="mt-8 text-justify font-medium sm:text-lg md:text-lg pointer-events-none">
                 "I turn vision into reality with code. Whether I'm working on a
                 website or any digital product, I bring my commitment to design
                 excellence and user-centered thinking to every project I work
@@ -53,6 +53,7 @@ const About = () => {
               className="mr-0 flex items-center justify-center gap-4 lg:mr-8 lg:justify-end"
               style={{ opacity: 1 }}
             >
+              <br />
               <div className="relative flex w-12 gap-4 overflow-hidden rounded-md">
                 <FlagSvg />
               </div>
