@@ -13,7 +13,7 @@ const TechStackContent = ({
       <span className="text-xs font-semibold text-foreground sm:text-sm tracking-widest">
         {skill}
       </span>
-      <div className="mt-2 flex flex-wrap gap-4 text-xl text-accent1 text-foreground bg-transparent transition-all ease-in-out hover:scale-100 pointer-events-auto cursor-default">
+      <div className="mt-2 flex flex-wrap gap-4 text-xl text-accent1 text-foreground backdrop-blur-md transition-all ease-in-out hover:scale-100 pointer-events-auto cursor-default">
         {skillName1}
         {skillName2}
         {skillName3}

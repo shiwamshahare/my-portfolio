@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="flex w-full flex-col items-center gap-20 bg-transparent px-4 py-4 pt-12 md:px-20">
-      <div className="mx-auto flex h-auto w-full  flex-col gap-6 ring-1 rounded-2xl p-2  sm:p-8 md:gap-6 lg:p-3 ">
+      <div className="mx-auto flex h-auto w-full lg:pb-8 flex-col gap-6 ring-1 rounded-2xl p-2  sm:p-8 md:gap-6 lg:p-3 ">
         <div className="text-center text-4xl">
           <h1 className="inline-block rounded-full text-accent1 px-3 py-1 uppercase text-blue-500 transition-all ease-in-out duration-300 hover:tracking-wide">
             Socials
