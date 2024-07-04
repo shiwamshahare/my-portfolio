@@ -29,8 +29,8 @@ const Project = () => {
               descrOfPro={`
                         Managed the design and development of a personal portfolio website showcasing skills and projects. Implemented responsive design principles for optimal viewing on various devices. Created and curated content to effectively communicate professional experience and accomplishments. Utilized SEO strategies to increase visibility and reach a wider audience.
                         `}
-              codeLink={`https://github.com/shiwamshahare/portfolio`}
-              liveLink={`shiwamshahare.github.io/portfolio/`}
+              codeLink={`https://github.com/shiwamshahare/my-portfolio`}
+              liveLink={`https://shiwamshahare.netlify.app/`}
             />
             <ProMainCard
               titlePro={"Bootstrap-website"}
@@ -41,7 +41,8 @@ const Project = () => {
               lan4={"#JavaScript"}
               descrOfPro={`
                         " Managed the development of a Dummy Bootstrap website from inception to completion, working closely with the developer to ensure all requirements were met. Oversaw the design, layout, and functionality of the website, ensuring a user-friendly experience. Implemented responsive design principles to optimize the site for various devices and screen sizes. "`}
-              codeLink={`https://github.com/shiwamshahare/portfolio`}
+              codeLink={`https://github.com/shiwamshahare/Bootstrap-website`}
+              liveLink={`https://shiwamshahare.github.io/Bootstrap-website/`}
             />
           </div>
         </div>
