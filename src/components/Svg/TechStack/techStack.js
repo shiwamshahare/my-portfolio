@@ -7,6 +7,9 @@ import JquerySvg from './JquerySvg';
 import BootstrapSvg from "./BootstrapSvg";
 import GitSvg from './GitSvg';
 import GhubSvg from "./GhubSvg";
+import CSvg from "./CSvg";
+import CppSvg from "./CppSvg";
+import JavaSvg from "./JavaSvg";
 
 
 export {
@@ -18,5 +21,8 @@ export {
     JquerySvg,
     BootstrapSvg,
     GitSvg,
-    GhubSvg
+    GhubSvg,
+    CSvg,
+    CppSvg,
+    JavaSvg
 }

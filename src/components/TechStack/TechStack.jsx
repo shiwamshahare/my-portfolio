@@ -12,6 +12,9 @@ import {
   BootstrapSvg,
   GitSvg,
   GhubSvg,
+  CSvg,
+  CppSvg,
+  JavaSvg,
 } from "../Svg/TechStack/techStack";
 import TiltSvg from "../Svg/TiltSvg";
 
@@ -38,6 +41,11 @@ const TechStack = () => {
               elementSvg={<JavaScriptSvg />}
               titleName={"JavaScript"}
             />
+          }
+          skillName4={<CardButton elementSvg={<CSvg />} titleName={" C "} />}
+          skillName5={<CardButton elementSvg={<CppSvg />} titleName={"C++"} />}
+          skillName6={
+            <CardButton elementSvg={<JavaSvg />} titleName={"Java"} />
           }
         />
         <TechStackContent

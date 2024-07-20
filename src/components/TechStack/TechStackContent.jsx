@@ -7,6 +7,7 @@ const TechStackContent = ({
   skillName3 = "",
   skillName4 = "",
   skillName5 = "",
+  skillName6 = "",
 }) => {
   return (
     <div className="mt-4">
@@ -19,6 +20,7 @@ const TechStackContent = ({
         {skillName3}
         {skillName4}
         {skillName5}
+        {skillName6}
       </div>
     </div>
   );
