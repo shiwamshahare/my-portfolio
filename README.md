@@ -11,9 +11,4 @@ Currently, two official plugins are available:
 # Installation
 
 npm i <br/>
-npm i react-router-dom  <br/>
-npm i react typed.js  <br/>
-npm i react-tilt  <br/>
- <br/>
 
-tailwind-css
