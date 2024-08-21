@@ -38,7 +38,6 @@ const Project = () => {
               lan1={"#HTML"}
               lan2={"#CSS"}
               lan3={"#Bootstrap"}
-              lan4={"#JavaScript"}
               descrOfPro={`
                         " Managed the development of a Dummy Bootstrap website from inception to completion, working closely with the developer to ensure all requirements were met. Oversaw the design, layout, and functionality of the website, ensuring a user-friendly experience. Implemented responsive design principles to optimize the site for various devices and screen sizes. "`}
               codeLink={`https://github.com/shiwamshahare/Bootstrap-website`}
